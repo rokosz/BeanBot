@@ -1,8 +1,6 @@
 const { RichEmbed } = require('discord.js');
 const fs = require('fs');
 
-const config = require(__dirname + '/../config/config.js');
-
 exports.run = async (client, message) => {
 
   fs.readdir(__dirname , (err, files) => {
@@ -43,5 +41,5 @@ exports.run = async (client, message) => {
 module.exports.help = {
   name: 'help',
   description: 'displays the commands',
-  useage: `${config.prefix}help`
+  useage: `b./b!/-b help`
 }
