@@ -7,6 +7,15 @@ const client = new Client({
 
 const config = require(__dirname + '/config/config.js') // using __dirname + 'dirpath' to avoid directory issues
 
+const sql = require('sqlite');
+(async() => {
+
+  // open and create a table if it doesn't exist.
+
+  await sql.open(__dirname + '/src/databases/db.sqlite');
+  await sql.run('CREATE TABLE IF NOT EXISTS `logs` (timestamp` TEXT)');
+})();
+
 require(__dirname + '/src/handlers/commandHandler.js')(client);
 require(__dirname + '/src/handlers/eventLoader.js')(client);
 
