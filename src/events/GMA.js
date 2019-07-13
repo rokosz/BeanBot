@@ -6,6 +6,6 @@ const { logChannel, db } = require(__dirname + '/../config/config.js');
 
 module.exports = async member => {
 
-
+  
 
 }
