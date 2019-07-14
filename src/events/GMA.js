@@ -2,7 +2,12 @@ const { RichEmbed } = require('discord.js');
 const chalk = require('chalk'); // CLI coloring
 const { timestamp, db } = require(__dirname + '/../config/config.js');
 
-// TODO: setup user database for people joining.
+// database stuff
+
+const sql = require('sqlite');
+await sql.open(__dirname + '/../databases/db.sqlite');
+
+// TODO: setup user database for people joining & clean it up.
 
 module.exports = async member => {
 
@@ -29,6 +34,6 @@ module.exports = async member => {
 
   // TODO: setup logging for adding and removing from database when action is called.
 
-  
+  sql.prepare("INSERT INTO users VALUES (?)").then(b => b.run([message.author.id]));
 
 }
