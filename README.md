@@ -19,7 +19,7 @@ exports.prefixArray = ['b.', 'b!', '-b'];
 exports.supportArray = ['userid array here'];
 ```
 ## Dependencies (don't kill me plz th0nx)
-* [**fs**] - Partially used for the command handler
+* **fs** - Partially used for the command handler
 * [**SQLite**](https://www.npmjs.com/package/sqlite) - Primary database backend.
 * [**chalk**](https://www.npmjs.com/package/chalk) - CLI coloring. Who can resist this?
 * [**moment**](https://www.npmjs.com/package/moment) - Used for the timestamp
