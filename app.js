@@ -14,6 +14,8 @@ const sql = require('sqlite');
 
   await sql.open(__dirname + '/src/databases/db.sqlite');
   await sql.run('CREATE TABLE IF NOT EXISTS `logs` (timestamp` TEXT)');
+  await sql.run("CREATE TABLE IF NOT EXISTS `queries` ( `id` INTEGER )");
+
 })();
 
 require(__dirname + '/src/handlers/commandHandler.js')(client);
