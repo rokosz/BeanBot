@@ -10,5 +10,6 @@ module.exports = (client) => {
 
   // experimental
   client.on('messageUpdate', eventLoad('MU'));
+  client.on('messageDelete', eventLoad('MD'));
 
 }
