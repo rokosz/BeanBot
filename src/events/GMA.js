@@ -30,8 +30,10 @@ module.exports = async member => {
 
   introductions.send(beanWelcome);
 
-  let member = message.guild.roles.find(role => r.name === "");
-  
+  // allow for the verification system to be used.
+
+  let agreementRole = message.guild.roles.find(role => r.name === "");
+  message.member.addRole(agreementRole);
 
   console.log(chalk.blue(`[${member.guild}]`) +` ${member.user.username} has joined at ${timestamp}.`);
 
