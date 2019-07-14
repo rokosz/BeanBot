@@ -27,5 +27,5 @@ exports.supportArray = ['userid array here'];
 * [**mongoose/MongoDB**](https://www.npmjs.com/package/mongoose) - Lighter easier backend database for low priority storage. Download MongoDB Compass to have this bit working properly.
 ## Developers 👦
 * [**Jake 🐏**](https://github.com/rokosz) - Lead development
-## License 🆔
+## License 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/rokosz/BeanBot/blob/master/LICENSE) file for details
