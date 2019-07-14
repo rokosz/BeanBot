@@ -12,4 +12,7 @@ module.exports = (client) => {
   client.on('messageUpdate', eventLoad('MU'));
   client.on('messageDelete', eventLoad('MD'));
 
+  client.on('channelCreate', eventLoad('CC'));
+  client.on('channelDelete', eventLoad('CD'));
+
 }
