@@ -3,38 +3,16 @@ const fs = require('fs');
 
 exports.run = async (client, message) => {
 
-  fs.readdir(__dirname , (err, files) => {
-     if(err) console.error(err);
+  // just addressing each command. Could be done otherwise. (see previous commit).
 
-    let jsfiles = files.filter(f => f.split(".").pop() === "js");
-    if(jsfiles.length <= 0) {
-        console.log("No commands to load!");
-        return;
-    }
+  const embed = new RichEmbed()
+    .setTitle('Command help')
+    .addField('Public commands', 'b.help, b.hex, b.serverinfo, b.userinfo, b.verify')
+    .addField('Moderation commands', 'b.ban, b.kick, b.warn, b.lockdown, b.mute')
+    .setFooter('BeanBot © rokosz 2019')
+    .setTimestamp()
 
-    var namelist = "";
-    var desclist = "";
-    var usage = "";
-
-    let result = jsfiles((f, i) => {
-        let props = require(`./${f}`);
-        namelist = props.help.name;
-        desclist = props.help.description;
-        usage = props.help.usage;
-
-        // send help text
-        let helpembed = new Discord.RichEmbed()
-        .setTitle("Commands")
-        .setFooter("Please report any bugs to Vati#1662")
-        .setColor("RANDOM")
-        .addField("Name:", namelist, true)
-        .addField("Usage:", usage, true)
-        .addField("Description:", desclist)
-
-        message.author.sendEmbed(helpembed);
-    });
-
-   })
+  message.channel.send(embed);
 
 }
 
