@@ -30,6 +30,9 @@ module.exports = async member => {
 
   introductions.send(beanWelcome);
 
+  let member = message.guild.roles.find(role => r.name === "");
+  
+
   console.log(chalk.blue(`[${member.guild}]`) +` ${member.user.username} has joined at ${timestamp}.`);
 
   // TODO: setup logging for adding and removing from database when action is called.
