@@ -8,4 +8,7 @@ module.exports = (client) => {
   client.on('guildMemberAdd', bean('GMA'));
   client.on('guildMemberRemove', bean('GMR'));
 
+  // experimental
+  client.on('messageUpdate', eventLoad('MU'));
+
 }
