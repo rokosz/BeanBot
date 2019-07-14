@@ -9,3 +9,4 @@ exports.db = 'yeet';
 exports.prefixArray = ['b.', 'b!', '-b'];
 exports.supportArray = ['userid array here'];
 exports.timestamp = `${moment().format("YYYY-MM-DD HH:mm:ss")}`;
+exports.adminRoles = ['', ''];
