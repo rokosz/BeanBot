@@ -19,5 +19,5 @@ exports.run = async (client, message) => {
 module.exports.help = {
   name: 'help',
   description: 'displays the commands',
-  useage: `b./b!/-b help`
+  useage: `b.`
 }
