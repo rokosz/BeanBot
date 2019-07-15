@@ -12,6 +12,14 @@ module.exports.run = async (client, message, args) => {
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "No reason needed."
 
+    member.ban().then((member) => {
+      // TODO: setup logging and database blacklisting.
+
+    }).catch(() => {
+      // TODO: same as above for failures (mod attempting mod/admin ban)
+      
+    })
+
   }
 
 }
