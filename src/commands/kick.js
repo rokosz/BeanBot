@@ -1,3 +1,10 @@
+const { RichEmbed } = require('discord.js');
+const chalk = require('chalk');
+const { timestamp } = require('/../config/config.js');
+
+const sql = require('sqlite');
+await sql.open(__dirname + '/../databases/db.sqlite');
+
 module.exports.run = async (client, message, args) => {
 
   if(message.member.roles.some(r => ['', ''].includes(r.name))) {
@@ -36,7 +43,6 @@ module.exports.run = async (client, message, args) => {
       console.log(chalk.yellow(`[${member.guild}]`) + `${member.user.username} is unkickable`);
 
     });
-
 
   }
 
