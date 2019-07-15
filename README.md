@@ -13,7 +13,7 @@ const config = {
 }
 ```
 ### Exports ✅
-Navigate into the [config](https://github.com/rokosz/BeanBot/blob/master/src/config/config.js) once more and edit the following lines only if you really need to. Add your support members and only change the prefixes if you really need to.
+Navigate into the [config](https://github.com/rokosz/BeanBot/blob/master/src/config/config.js) once more and edit the following lines only if you really need to. Add your support members.
 ```
 exports.prefixArray = ['b.', 'b!', '-b'];
 exports.supportArray = ['userid array here'];
@@ -27,5 +27,5 @@ exports.supportArray = ['userid array here'];
 * [**mongoose/MongoDB**](https://www.npmjs.com/package/mongoose) - Lighter easier backend database for low priority storage. Download MongoDB Compass to have this bit working properly.
 ## Developers 👦
 * [**Jake 🐏**](https://github.com/rokosz) - Lead development
-## License 
+## License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/rokosz/BeanBot/blob/master/LICENSE) file for details
