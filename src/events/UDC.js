@@ -11,8 +11,8 @@ module.exports = async (oldUser, newUser) => {
     .setAuthor(`${newUser.tag}`)
     .setDescription(`<@${newUser.id}> - *${newUser.id}*`)
     .setColor('')
-    .addField('Old Discriminator', `**${oldUser.discriminator}**`)
-    .addField('New Discriminator', `**${newUser.discriminator}**`)
+    .addField('Old Discriminator', `**${oldUser.discriminator}**`, true)
+    .addField('New Discriminator', `**${newUser.discriminator}**`, true)
     .setFooter(`<@${newUser.id}> || *${newUser.id}*` + new Date())
 
   if(oldUser.discriminator != newUser.discriminator) {
