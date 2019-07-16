@@ -20,7 +20,7 @@ module.exports = async (oldUser, newUser) => {
 
     logs.send(avatarChange).then(console.log(chalk.yellow(`${newUser.id} - ${newUser.username} has changed their avatar.`)));
 
-    
+    sql.prepare("INSERT INTO logs VALUES (?)").then(b => b.run([message.author.id]));
 
   }
 
