@@ -4,7 +4,7 @@ module.exports = async (oldUser, newUser) => {
 
   if(oldUser.avatar === newUser.avatar) return;
 
-  // TODO: setup database logging for discriminator changes.
+  // TODO: setup database logging for avatar changes.
 
   const avatarChange = new RichEmbed();
     .setTitle('Avatar Changed')
