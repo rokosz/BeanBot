@@ -4,6 +4,8 @@ module.exports = async (oldUser, newUser) => {
 
   if(oldUser.discriminator === newUser.discriminator) return;
 
+  // TODO: setup database logging for discriminator changes.
+
   const discrimChange = new RichEmbed();
     .setTitle('Discriminator Changed')
     .setAuthor(`${newUser.tag}`)
