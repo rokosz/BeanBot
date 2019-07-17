@@ -7,7 +7,7 @@ module.exports = async (oldUser, newUser) => {
 
   // TODO: setup database logging for avatar changes.
 
-  const avatarChange = new RichEmbed();
+  const avatarChange = new RichEmbed()
     .setTitle('Avatar Changed')
     .setAuthor(`${newUser.tag}`)
     .setDescription(`<@${newUser.id}> - *${newUser.id}*`)
