@@ -7,7 +7,7 @@ module.exports = async (oldUser, newUser) => {
 
   // TODO: setup database logging for username changes.
 
-  const unameChange = new RichEmbed();
+  const unameChange = new RichEmbed()
     .setTitle('Username Changed')
     .setAuthor(`${newUser.tag}`)
     .setDescription(`<@${newUser.id}> - *${newUser.id}*`)
