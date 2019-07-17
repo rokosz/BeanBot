@@ -2,7 +2,7 @@ const { RichEmbed } = require('discord.js');
 
 module.exports = async (oldUser, newUser) => {
 
-  let logs = member.guild.channels.find(c => c.name === 'logs');
+  let logs = newUser.guild.channels.find(c => c.name === 'logs');
   if(oldUser.avatar === newUser.avatar) return;
 
   // TODO: setup database logging for avatar changes.

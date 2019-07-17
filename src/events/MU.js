@@ -3,7 +3,7 @@ const { RichEmbed } = require('discord.js');
 module.exports = async (newMessage, oldMessage) => {
 
   if(newMessage.content === oldMessage.content) return;
-  let logs = member.guild.channels.find(c => c.name === 'logs');
+  let logs = newMessage.guild.channels.find(c => c.name === 'logs');
 
   const messageUpdate = new RichEmbed();
     .setTitle('Message Updated.')
