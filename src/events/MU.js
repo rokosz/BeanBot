@@ -5,7 +5,7 @@ module.exports = async (newMessage, oldMessage) => {
   if(newMessage.content === oldMessage.content) return;
   let logs = newMessage.guild.channels.find(c => c.name === 'logs');
 
-  const messageUpdate = new RichEmbed();
+  const messageUpdate = new RichEmbed()
     .setTitle('Message Updated.')
     .setAuthor(`${newMessage.author.tag}`)
     .setDescription(`<@${newMessage.author.id}> - *${newMessage.author.id}*`)
