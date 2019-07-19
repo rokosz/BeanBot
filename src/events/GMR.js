@@ -12,15 +12,6 @@ await sql.open(__dirname + '/../databases/db.sqlite');
 module.exports = async member => {
 
   let introductions = member.guild.channels.find(c => c.name === 'introductions');
-  if(!introductions) {
-    server.createChannel("introductions", "text")
-      .then(channel => {
-        let category = server.channels.find(c => c.name == "" && c.type == "category");
-
-        if(!category) throw new Error("Not a valid category");
-        channel.setParent(category.id);
-      }).catch(console.error);
-  }
 
   let beanRemove = new RichEmbed()
     .setThumbnail(member.avatarURL)
@@ -33,7 +24,5 @@ module.exports = async member => {
   console.log(chalk.red(`[${member.guild}]`) +` ${member.user.username} has left at ${timestamp}.`);
 
   // TODO: setup logging for adding and removing from database when action is called.
-
-  sql.prepare("DELETE FROM queries WHERE id = ?").then(b => b.run([member.id]));
 
 }
