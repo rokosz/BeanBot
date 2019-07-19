@@ -10,8 +10,8 @@ module.exports = async (oldMember, newMember) => {
     .setTitle('Nickname Changed')
     .setDescription(`${newMember.id}`)
     .setColor('#3498db')
-    .addField('Old Username', `**${oldMember.nickname}**`, true)
-    .addField('New Username', `**${newMember.nickname}**`, true)
+    .addField('Old Nickname', `**${oldMember.nickname}**`, true)
+    .addField('New Nickname', `**${newMember.nickname}**`, true)
     .setFooter(new Date())
 
   logs.send(unameChange);
