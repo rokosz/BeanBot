@@ -4,7 +4,7 @@ module.exports = async (client) => {
 
   console.log('BeanBot is active.');
 
-  client.user.setStatus('availavle')
+  client.user.setStatus('available')
   client.user.setPresence({
     game: {
       name: 'with everyones username',
