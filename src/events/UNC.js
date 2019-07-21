@@ -6,7 +6,7 @@ module.exports = async (oldMember, newMember) => {
 
   // TODO: setup database logging for username changes.
 
-  const unameChange = new RichEmbed()
+  const nickChange = new RichEmbed()
     .setTitle('Nickname Changed')
     .setDescription(`${newMember.id}`)
     .setColor('#3498db')
@@ -14,6 +14,6 @@ module.exports = async (oldMember, newMember) => {
     .addField('New Nickname', `**${newMember.nickname}**`, true)
     .setFooter(new Date())
 
-  logs.send(unameChange);
+  logs.send(nickChange);
 
 }
