@@ -1,5 +1,5 @@
-const Discord = require('discord.js');
-const client = new Client({
+const Bean = require('discord.js');
+const client = new Bean.Client({
   disableEveryone: true,
   autoReconnect: true,
   forceFetchUsers: true
