@@ -2,7 +2,7 @@ const { RichEmbed } = require('discord.js');
 
 module.exports = async (newUser, oldUser) => {
 
-  let logs = newMember.guild.channels.find(c => c.name === 'uwu-lounge');
+  let logs = newMember.guild.channels.find(c => c.name === 'logs');
 
   const avatarChangeEm = new RichEmbed()
     .setTitle('Avatar Changed')

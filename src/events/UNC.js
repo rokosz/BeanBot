@@ -2,9 +2,7 @@ const { RichEmbed } = require('discord.js');
 
 module.exports = async (oldMember, newMember) => {
 
-  let logs = newMember.guild.channels.find(c => c.name === 'uwu-lounge');
-
-  // TODO: setup database logging for username changes.
+  let logs = newMember.guild.channels.find(c => c.name === 'logs');
 
   const nickChange = new RichEmbed()
     .setTitle('Nickname Changed')
