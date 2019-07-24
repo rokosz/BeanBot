@@ -9,10 +9,10 @@ module.exports = (client) => {
   client.on('guildMemberRemove', bean('GMR'));
   client.on('guildMemberUpdate', bean('UNC'));
 
-/*
-  client.on('guildMemberUpdate', bean('UAC')); @error { logging when user also updates nick }
-  client.on('guildMemberUpdate', bean('UDC')); @errpr { logging when user also updates nick/discrim/ava }
-*/
+  client.on('guildBanAdd', bean('GBA'));
+  client.on('guildBanRemove', bean('GBR'));
+  
+  client.on('userUpdate', bean('UAC'));
 
   // experimental
 
