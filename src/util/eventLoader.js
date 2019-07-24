@@ -11,7 +11,6 @@ module.exports = (client) => {
 
   client.on('guildBanAdd', bean('GBA'));
   client.on('guildBanRemove', bean('GBR'));
-  
   client.on('userUpdate', bean('UAC'));
 
   // experimental
