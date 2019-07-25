@@ -6,7 +6,7 @@ There are a few prerequisites you will need to change in order to run the bot.
 
 ### Bot token
 Navigate into the [config](https://github.com/rokosz/BeanBot/blob/master/src/config/config.js) in your project and add in the keys to the following lines.
-```
+```js
 const config = {
   "token": "your bot token here",
   "googleAPI": "Google API token here.",
@@ -14,7 +14,7 @@ const config = {
 ```
 ### Exports ✅
 Navigate into the [config](https://github.com/rokosz/BeanBot/blob/master/src/config/config.js) once more and edit the following lines only if you really need to. Add your support members.
-```
+```js
 exports.prefixArray = ['b.', 'b!', '-b'];
 exports.supportArray = ['userid array here'];
 ```
