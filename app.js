@@ -1,13 +1,14 @@
 const Bean = require('discord.js');
-const client = new Bean.Client({
-  disableEveryone: true,
-  autoReconnect: true,
-  forceFetchUsers: true
-});
+const client = new Bean.Client({ disableEveryone: true });
+const sql = require('sqlite');
 
 const config = require(__dirname + '/config/config.js') // using __dirname + 'dirpath' to avoid directory issues
+const logger = require(__dirname + '/src/util/logger');
 
-const sql = require('sqlite');
+logger(client, {
+  logChannel: 'logs' // set your logging channel here.
+});
+
 (async() => {
 
   // open and create a table if it doesn't exist.
