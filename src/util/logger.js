@@ -22,6 +22,40 @@ module.exports = async(client, options) => {
 
   });
 
+  client.on('guildBanAdd', (banguild, banuser) => {
+
+    let log = member.guild.channels.find(c => c.name === auditChannel);
+    if(!log) return;
+
+    const banEm = new RichEmbed()
+      .setDescription(`<@${banuser.id}> - ${banuser.id}`)
+      .setColor()
+      .setThumbnail(banuser.displayAvatarURL)
+      .setFooter(new Date())
+      .setTitle('user banned')
+      .setAuthor(`banned user: ${banuser.tag}`)
+
+    log.send(banEm)
+
+  });
+
+  client.on('guildBanRemove', ((banguild, banuser) => {
+
+    let log = member.guild.channels.find(c => c.name === auditChannel);
+    if(!log) return;
+
+    const unbanEm = new RichEmbed()
+      .setDescription(`<@${banuser.id}> - ${banuser.id}`)
+      .setColor()
+      .setThumbnail(banuser.displayAvatarURL)
+      .setFooter(new Date())
+      .setTitle('user unbanned')
+      .setAuthor(`unbanned user: ${banuser.tag}`)
+
+    log.send(unbanEm)
+
+  });
+
   client.on('guildMemberRemove', (member) => {
 
     let log = member.guild.channels.find(c => c.name === auditChannel);
@@ -59,6 +93,7 @@ module.exports = async(client, options) => {
   client.on('messageUpdate', (oldMessage, newMessage) => {
 
     if(oldMessage.content == newMessage.content) return;
+    if(newMessage.content.length > 1024) return;
 
     let log = newMessage.guild.channels.find(c => c.name === auditChannel)
     if(!log) return;
@@ -80,6 +115,8 @@ module.exports = async(client, options) => {
 
     let log = message.guild.channels.find(c => c.name === auditChannel)
     if(!log) return;
+
+    if(message.content.length > 1024) return;
 
     if(message.author.bot) return;
 
